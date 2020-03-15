@@ -6,7 +6,7 @@ ENV GOLANG_VERSION 1.13.8
 
 RUN set -e;\
   apt-get update; \
-  apt-get install -y git curl gcc libssl-dev && \
+  apt-get install -y git curl make gcc libssl-dev && \
   curl -sL https://dl.google.com/go/go${GOLANG_VERSION}.linux-amd64.tar.gz | tar -C /usr/local -xz
 
 ENV GOPATH /go
