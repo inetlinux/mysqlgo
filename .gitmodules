@@ -1,3 +1,0 @@
-[submodule "mariadb"]
-	path = mariadb
-	url = https://github.com/docker-library/mariadb.git
