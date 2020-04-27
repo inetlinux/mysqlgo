@@ -2,11 +2,10 @@ FROM mariadb:10.3
 
 # https://github.com/docker-library/mariadb/tree/master/10.3
 
-ENV GOLANG_VERSION 1.13.8
+ENV GOLANG_VERSION 1.13.10
 
 RUN set -e;\
-  apt-get update; \
-  apt-get install -y git curl make gcc libssl-dev vim && \
+  yum install -y git curl make gcc libssl-dev vim && \
   curl -sL https://dl.google.com/go/go${GOLANG_VERSION}.linux-amd64.tar.gz | tar -C /usr/local -xz
 
 ENV GOPATH /go
