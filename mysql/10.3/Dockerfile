@@ -27,6 +27,8 @@ RUN set -ex; \
         | xargs -rt -0 sed -ri 's/^(bind-address|log)/#&/'; \
     echo -e '[mysqld]\nskip-host-cache\nskip-name-resolve' > /etc/my.cnf.d/docker.cnf
 
+RUN yum clean all
+
 VOLUME /var/lib/mysql
 EXPOSE 3306
 

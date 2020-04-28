@@ -4,7 +4,8 @@ ENV GOLANG_VERSION 1.13.10
 
 RUN set -e;\
   yum install -y git curl make gcc openssl-devel vim && \
-  curl -sL https://dl.google.com/go/go${GOLANG_VERSION}.linux-amd64.tar.gz | tar -C /usr/local -xz
+  curl -sL https://dl.google.com/go/go${GOLANG_VERSION}.linux-amd64.tar.gz | tar -C /usr/local -xz; \
+  yum clean all
 
 ENV GOPATH /go
 ENV PATH $GOPATH/bin:/usr/local/go/bin:$PATH

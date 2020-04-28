@@ -10,6 +10,8 @@ docker run --rm -e MYSQL_ALLOW_EMPTY_PASSWORD=yes -v your-init.sql:/docker-entry
 docker run --rm -e MYSQL_ALLOW_EMPTY_PASSWORD=yes -v your-init.sql:/docker-entrypoint-initdb.d/init.sql inetlinux/mysqlgo
 ```
 
+
+
 **构建镜像**
 
     docker build -t inetlinux/mysqlgo .
