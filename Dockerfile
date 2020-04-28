@@ -1,6 +1,4 @@
-FROM mariadb:10.4
-
-# https://github.com/docker-library/mariadb/tree/master/10.3
+FROM inetlinux/mariadb:10.4
 
 ENV GOLANG_VERSION 1.13.10
 
